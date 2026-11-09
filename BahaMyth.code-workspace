@@ -1,0 +1,63 @@
+{
+	"folders": [
+		{
+			"name": "DEV",
+			"path": "."
+		},
+		{
+			"name": "APP",
+			"path": "./BahaMyth-APP"
+		},
+		{
+			"name": "SDB",
+			"path": "./BahaMyth-SDB"
+		},
+		{
+			"name": "TRX",
+			"path": "./BahaMyth-TRX"
+		},
+		{
+			"name": "EXE",
+			"path": "./BahaMyth-EXE"
+		},
+		{
+			"name": "PWA",
+			"path": "./BahaMyth-PWA"
+		},
+		{
+			"name": "PKG",
+			"path": "./BahaMyth-PKG"
+		},
+		{
+			"name": "WEB",
+			"path": "./BahaMyth-WEB"
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"BahaMyth-APP": true,
+			"BahaMyth-SDB": true,
+			"BahaMyth-TRX": true,
+			"BahaMyth-EXE": true,
+			"BahaMyth-PWA": true,
+			"BahaMyth-PKG": true,
+			"BahaMyth-WEB": true
+		}
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "Setup: Clone & Install All Repos",
+				"type": "shell",
+				"command": "pwsh",
+				"args": [
+					"-NoProfile",
+					"-File",
+					"${workspaceFolder:DEV}/scripts/setup.ps1"
+				],
+				"problemMatcher": []
+			}
+		]
+	}
+}
